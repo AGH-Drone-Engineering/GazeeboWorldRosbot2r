@@ -7,7 +7,7 @@
             <collision name="collision">
                 <geometry>
                     <mesh>
-                        <uri>Italy.stl</uri>
+                        <uri>italy_obj/Italy.stl</uri>
                         <scale>1 1 1</scale>
                     </mesh>
                 </geometry>
@@ -15,7 +15,7 @@
             <visual name="visual">
                 <geometry>
                     <mesh>
-                        <uri>Italy.dae</uri>
+                        <uri>italy_obj/Italy.dae</uri>
                         <scale>1 1 1</scale>
                     </mesh>
                 </geometry>
