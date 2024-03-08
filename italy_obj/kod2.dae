@@ -11,16 +11,16 @@
     <up_axis>Z_UP</up_axis>
   </asset>
   <library_effects>
-    <effect id="kod0-effect">
+    <effect id="kod2-effect">
       <profile_COMMON>
-        <newparam sid="kod0_png-surface">
+        <newparam sid="kod2_png-surface">
           <surface type="2D">
-            <init_from>kod0_png</init_from>
+            <init_from>kod2_png</init_from>
           </surface>
         </newparam>
-        <newparam sid="kod0_png-sampler">
+        <newparam sid="kod2_png-sampler">
           <sampler2D>
-            <source>kod0_png-surface</source>
+            <source>kod2_png-surface</source>
           </sampler2D>
         </newparam>
         <technique sid="common">
@@ -29,7 +29,7 @@
               <color sid="emission">0 0 0 1</color>
             </emission>
             <diffuse>
-              <texture texture="kod0_png-sampler" texcoord="UVMap"/>
+              <texture texture="kod2_png-sampler" texcoord="UVMap"/>
             </diffuse>
             <index_of_refraction>
               <float sid="ior">1.45</float>
@@ -40,13 +40,13 @@
     </effect>
   </library_effects>
   <library_images>
-    <image id="kod0_png" name="kod0_png">
-      <init_from>kod0.png</init_from>
+    <image id="kod2_png" name="kod2_png">
+      <init_from>kod2.png</init_from>
     </image>
   </library_images>
   <library_materials>
-    <material id="kod0-material" name="kod0">
-      <instance_effect url="#kod0-effect"/>
+    <material id="kod2-material" name="kod2">
+      <instance_effect url="#kod2-effect"/>
     </material>
   </library_materials>
   <library_geometries>
@@ -84,7 +84,7 @@
         <vertices id="Plane-mesh-vertices">
           <input semantic="POSITION" source="#Plane-mesh-positions"/>
         </vertices>
-        <triangles material="kod0-material" count="2">
+        <triangles material="kod2-material" count="2">
           <input semantic="VERTEX" source="#Plane-mesh-vertices" offset="0"/>
           <input semantic="NORMAL" source="#Plane-mesh-normals" offset="1"/>
           <input semantic="TEXCOORD" source="#Plane-mesh-map-0" offset="2" set="0"/>
@@ -95,12 +95,12 @@
   </library_geometries>
   <library_visual_scenes>
     <visual_scene id="Scene" name="Scene">
-      <node id="kod0" name="kod0" type="NODE">
+      <node id="kod2" name="kod2" type="NODE">
         <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
-        <instance_geometry url="#Plane-mesh" name="kod0">
+        <instance_geometry url="#Plane-mesh" name="kod2">
           <bind_material>
             <technique_common>
-              <instance_material symbol="kod0-material" target="#kod0-material">
+              <instance_material symbol="kod2-material" target="#kod2-material">
                 <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
               </instance_material>
             </technique_common>
